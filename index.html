@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev-Toolkit: A Shared Brain for AI Assistants</title>
+
+    <!-- Open Graph / Figma Preview -->
+    <meta property="og:title" content="Dev-Toolkit: A Shared Brain for AI Assistants">
+    <meta property="og:description" content="A shared repo of skills and context files that any AI coding tool can read.">
+    <meta property="og:image" content="https://dev-toolkit-presentation.onrender.com/og-image.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dev-Toolkit: A Shared Brain for AI Assistants">
+    <meta name="twitter:image" content="https://dev-toolkit-presentation.onrender.com/og-image.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+
+    <style>
+        :root {
+            --r-background-color: #0f0f1a;
+            --r-main-font: system-ui, -apple-system, sans-serif;
+            --r-heading-font: system-ui, -apple-system, sans-serif;
+            --r-main-color: #e0e0e0;
+            --r-heading-color: #ffffff;
+            --r-link-color: #6c9fff;
+        }
+
+        .reveal { font-size: 32px; }
+        .reveal h1 { font-size: 2.2em; font-weight: 700; margin-bottom: 0.4em; }
+        .reveal h2 { font-size: 1.6em; font-weight: 600; margin-bottom: 0.6em; }
+        .reveal h3 { font-size: 1.1em; font-weight: 500; color: #6c9fff; }
+        .reveal p, .reveal li { font-size: 0.85em; line-height: 1.6; }
+        .reveal .subtitle { color: #888; font-size: 0.7em; margin-top: 0.5em; }
+
+        .accent { color: #6c9fff; }
+        .dim { color: #666; }
+        .highlight { color: #ffd700; }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+            text-align: left;
+        }
+
+        .concept-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 1.2em;
+            border-left: 3px solid #6c9fff;
+        }
+
+        .concept-box.context-box {
+            border-left-color: #ffd700;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .platform-item {
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 0.8em 1.2em;
+            font-size: 0.8em;
+        }
+
+        .workflow-arrow {
+            font-size: 1.4em;
+            letter-spacing: 0.05em;
+        }
+
+        .honest-list {
+            text-align: left;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .honest-list li { margin-bottom: 0.8em; }
+
+        .cta {
+            background: rgba(108, 159, 255, 0.1);
+            border: 1px solid rgba(108, 159, 255, 0.3);
+            border-radius: 12px;
+            padding: 1.5em 2em;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .reveal .slide-number { font-size: 14px; color: #444; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- 1: Title -->
+            <section>
+                <h1>Dev-Toolkit</h1>
+                <h3>A Shared Brain for AI Assistants</h3>
+                <p class="subtitle">dotdotdash · technology monthly</p>
+                <aside class="notes">
+                    Quick show of hands: how many of you use an AI coding assistant at least once a week?
+                    Keep your hand up if you've had to re-explain your team's conventions to it more than once.
+                </aside>
+            </section>
+
+            <!-- 2: The Problem -->
+            <section>
+                <h2>The Problem</h2>
+                <p style="font-size: 1.1em;">Every AI session starts from <span class="accent">zero</span>.</p>
+                <br>
+                <ul>
+                    <li class="fragment">No memory of your branch naming conventions</li>
+                    <li class="fragment">No knowledge of your deploy targets</li>
+                    <li class="fragment">No shared context across the team</li>
+                    <li class="fragment">Everyone builds their own prompts — <span class="dim">none of it shared</span></li>
+                </ul>
+                <aside class="notes">
+                    This is the core problem. Every new session is a blank slate.
+                    At team scale it gets worse — everyone has their own prompt snippets, their own workarounds, none of it version controlled or shared.
+                </aside>
+            </section>
+
+            <!-- 3: What Is It -->
+            <section>
+                <h2>What is dev-toolkit?</h2>
+                <p style="font-size: 1em;">
+                    A shared repo of <span class="accent">skills</span> and <span class="highlight">context</span> files<br>
+                    that any AI coding tool can read.
+                </p>
+                <br>
+                <p class="dim" style="font-size: 0.7em;">So the assistant already knows how your team works.</p>
+                <aside class="notes">
+                    One sentence pitch. It's a shared repo. Skills and context files. Any AI tool reads them.
+                    Your assistant starts the session already knowing your conventions.
+                </aside>
+            </section>
+
+            <!-- 4: Skills vs Context -->
+            <section>
+                <div class="two-col">
+                    <div class="concept-box">
+                        <h3 class="accent">Skills</h3>
+                        <p><em>"How to do X"</em></p>
+                        <p style="font-size: 0.75em;">Step-by-step playbooks the AI follows.</p>
+                        <br>
+                        <p class="dim" style="font-size: 0.65em;">
+                            Deploy to Render<br>
+                            Evaluate an RFP<br>
+                            Implement a Figma design<br>
+                            Debug failing CI
+                        </p>
+                    </div>
+                    <div class="concept-box context-box">
+                        <h3 class="highlight">Context</h3>
+                        <p><em>"Our conventions are…"</em></p>
+                        <p style="font-size: 0.75em;">Standards that shape how the AI behaves.</p>
+                        <br>
+                        <p class="dim" style="font-size: 0.65em;">
+                            Branch naming rules<br>
+                            Creative tenets<br>
+                            GitHub workflow<br>
+                            Context engineering
+                        </p>
+                    </div>
+                </div>
+                <aside class="notes">
+                    This is the core mental model.
+                    Skills tell the AI WHAT to do. Context tells it HOW to behave.
+                    Both are just markdown files in a repo.
+                </aside>
+            </section>
+
+            <!-- 5: Platform Agnostic -->
+            <section>
+                <h2>Works Everywhere</h2>
+                <p style="font-size: 0.8em; margin-bottom: 1em;">Same skills, same context — any tool.</p>
+                <div class="platform-grid">
+                    <div class="platform-item">Warp / Oz</div>
+                    <div class="platform-item">Claude Code</div>
+                    <div class="platform-item">Cursor</div>
+                    <div class="platform-item">Codex</div>
+                </div>
+                <br>
+                <p class="dim" style="font-size: 0.65em;">Each tool reads from the same source of truth. No lock-in.</p>
+                <aside class="notes">
+                    You're not locked into any one tool.
+                    Skills and context are just markdown files — each AI tool has its own config that points to them.
+                </aside>
+            </section>
+
+            <!-- 6: Not Just for Devs -->
+            <section>
+                <h2>Not Just for Developers</h2>
+                <p style="font-size: 0.8em; margin-bottom: 1em;">Describe what you want in plain language.</p>
+                <div class="two-col" style="font-size: 0.75em;">
+                    <div>
+                        <p><span class="accent">Designers</span></p>
+                        <p class="dim">"Implement this Figma design"</p>
+                        <br>
+                        <p><span class="accent">Project Managers</span></p>
+                        <p class="dim">"Summarize recent Sentry errors"</p>
+                    </div>
+                    <div>
+                        <p><span class="accent">QA</span></p>
+                        <p class="dim">"Why are the tests failing on this PR?"</p>
+                        <br>
+                        <p><span class="accent">Everyone</span></p>
+                        <p class="dim">"Help me set up this project"</p>
+                    </div>
+                </div>
+                <aside class="notes">
+                    You don't need to know which skill to use. Just describe what you want.
+                    The AI picks the right skill. This isn't just a developer tool.
+                </aside>
+            </section>
+
+            <!-- 7: Demo -->
+            <section data-background-color="#1a1a3e">
+                <h2>Demo</h2>
+                <div class="workflow-arrow">
+                    <span class="accent">Brainstorming</span>
+                    <span class="dim"> → </span>
+                    <span class="highlight">Writing Plans</span>
+                </div>
+                <br>
+                <p class="dim" style="font-size: 0.7em;">From a vague idea to an implementation-ready plan</p>
+                <aside class="notes">
+                    Live demo. Start with a vague feature idea.
+                    Show the AI using the brainstorming skill to shape it through dialogue,
+                    then transition to writing plans to break it into implementable steps.
+                    Key callout: you didn't tell it which skill to use — routing happened automatically.
+                </aside>
+            </section>
+
+            <!-- 8: Where We're Headed -->
+            <section>
+                <h2>Where We're Headed</h2>
+                <p style="font-size: 0.9em; margin-bottom: 0.8em;">
+                    This is a <span class="accent">flag in the ground</span>.
+                </p>
+                <ul class="honest-list">
+                    <li class="fragment">
+                        <strong>Works today:</strong> skills and context that make AI assistants
+                        meaningfully better at day-to-day work
+                    </li>
+                    <li class="fragment">
+                        <strong>Theoretical:</strong> shared context across agents and people —
+                        the MCP server exists but isn't battle-tested
+                    </li>
+                    <li class="fragment">
+                        <strong>Emerging:</strong> entire.io, Temporal, and other tools that
+                        could reshape team-level AI context
+                    </li>
+                    <li class="fragment">
+                        <strong>Certain:</strong> this problem isn't going away —
+                        we're learning by building
+                    </li>
+                </ul>
+                <aside class="notes">
+                    Be honest. We're weeks into this, not months.
+                    The shared context server is theoretical — hasn't been tested with multiple people.
+                    Entire.io just launched and could be a big player. Temporal is on the radar but unexplored.
+                    What we DO have is a working set of skills that deliver value right now.
+                    The point: we started, and we're iterating.
+                </aside>
+            </section>
+
+            <!-- 9: CTA -->
+            <section>
+                <h2>Try One Skill This Week</h2>
+                <br>
+                <div class="cta">
+                    <p style="font-size: 0.8em; margin: 0; line-height: 2;">
+                        <span class="accent">Get started →</span> docs/getting-started.md<br>
+                        <span class="accent">Not a developer? →</span> docs/skills-for-everyone.md<br>
+                        <span class="accent">Need a new skill? →</span> templates/request-skill.md
+                    </p>
+                </div>
+                <br>
+                <p class="dim" style="font-size: 0.65em;">If a skill you need doesn't exist, request one.</p>
+                <aside class="notes">
+                    Low-stakes call to action. Try one skill this week.
+                    Barrier to entry: install your AI tool, point at the repo, describe what you want. That's it.
+                </aside>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            transition: 'fade',
+            transitionSpeed: 'fast',
+            plugins: [RevealNotes],
+            width: 1280,
+            height: 720,
+        });
+    </script>
+</body>
+</html>
