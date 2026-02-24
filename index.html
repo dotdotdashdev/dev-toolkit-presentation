@@ -19,24 +19,24 @@
 
     <style>
         :root {
-            --r-background-color: #0f0f1a;
-            --r-main-font: system-ui, -apple-system, sans-serif;
-            --r-heading-font: system-ui, -apple-system, sans-serif;
-            --r-main-color: #e0e0e0;
-            --r-heading-color: #ffffff;
-            --r-link-color: #6c9fff;
+            --r-background-color: #0A0A09;
+            --r-main-font: 'Saans', system-ui, -apple-system, sans-serif;
+            --r-heading-font: 'Saans', system-ui, -apple-system, sans-serif;
+            --r-main-color: #F7F5F2;
+            --r-heading-color: #F7F5F2;
+            --r-link-color: #D7FF35;
         }
 
         .reveal { font-size: 32px; }
-        .reveal h1 { font-size: 2.2em; font-weight: 700; margin-bottom: 0.4em; }
-        .reveal h2 { font-size: 1.6em; font-weight: 600; margin-bottom: 0.6em; }
-        .reveal h3 { font-size: 1.1em; font-weight: 500; color: #6c9fff; }
-        .reveal p, .reveal li { font-size: 0.85em; line-height: 1.6; }
-        .reveal .subtitle { color: #888; font-size: 0.7em; margin-top: 0.5em; }
+        .reveal h1 { font-size: 2.2em; font-weight: 570; margin-bottom: 0.4em; letter-spacing: -0.03em; }
+        .reveal h2 { font-size: 1.6em; font-weight: 570; margin-bottom: 0.6em; letter-spacing: -0.03em; }
+        .reveal h3 { font-size: 1.1em; font-weight: 570; color: #D7FF35; }
+        .reveal p, .reveal li { font-size: 0.85em; line-height: 1.3; font-weight: 570; letter-spacing: -0.02em; }
+        .reveal .subtitle { color: #CCC9C6; font-family: 'Saans SemiMono', monospace; font-size: 0.7em; margin-top: 0.5em; text-transform: uppercase; letter-spacing: 0; }
 
-        .accent { color: #6c9fff; }
-        .dim { color: #666; }
-        .highlight { color: #ffd700; }
+        .accent { color: #D7FF35; }
+        .dim { color: #CCC9C6; }
+        .highlight { color: #F7F5F2; }
 
         .two-col {
             display: grid;
@@ -46,14 +46,14 @@
         }
 
         .concept-box {
-            background: rgba(255,255,255,0.05);
-            border-radius: 12px;
+            background: rgba(247,245,242,0.05);
+            border-radius: 4px;
             padding: 1.2em;
-            border-left: 3px solid #6c9fff;
+            border-left: 3px solid #D7FF35;
         }
 
         .concept-box.context-box {
-            border-left-color: #ffd700;
+            border-left-color: #F7F5F2;
         }
 
         .platform-grid {
@@ -65,10 +65,14 @@
         }
 
         .platform-item {
-            background: rgba(255,255,255,0.05);
-            border-radius: 8px;
+            background: rgba(247,245,242,0.05);
+            border-radius: 4px;
             padding: 0.8em 1.2em;
             font-size: 0.8em;
+            font-family: 'Saans SemiMono', monospace;
+            text-transform: uppercase;
+            font-size: 0.7em;
+            letter-spacing: 0;
         }
 
         .workflow-arrow {
@@ -85,15 +89,15 @@
         .honest-list li { margin-bottom: 0.8em; }
 
         .cta {
-            background: rgba(108, 159, 255, 0.1);
-            border: 1px solid rgba(108, 159, 255, 0.3);
-            border-radius: 12px;
+            background: rgba(215, 255, 53, 0.06);
+            border: 1px solid rgba(215, 255, 53, 0.25);
+            border-radius: 4px;
             padding: 1.5em 2em;
             display: inline-block;
             text-align: left;
         }
 
-        .reveal .slide-number { font-size: 14px; color: #444; }
+        .reveal .slide-number { font-size: 12px; color: #CCC9C6; font-family: 'Saans SemiMono', monospace; }
     </style>
 </head>
 <body>
