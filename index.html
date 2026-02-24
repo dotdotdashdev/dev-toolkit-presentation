@@ -102,6 +102,37 @@
         .cta span:not(.accent) { color: #0A0A09; }
 
         .reveal .slide-number { font-size: 12px; color: #CCC9C6; font-family: 'Saans SemiMono', monospace; }
+
+        /* Morse code graphic: dot dot dash */
+        .morse {
+            display: flex;
+            gap: 7px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5em;
+        }
+        .morse .dit {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #0A0A09;
+        }
+        .morse .dah {
+            width: 62px;
+            height: 28px;
+            border-radius: 4px;
+            background: #0A0A09;
+        }
+
+        /* GitHub links in CTA */
+        .cta a {
+            color: #D7FF35;
+            text-decoration: none;
+            font-weight: 570;
+        }
+        .cta a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -109,10 +140,15 @@
         <div class="slides">
 
             <!-- 1: Title -->
-            <section>
-                <h1>Dev-Toolkit</h1>
-                <h3>A Shared Brain for AI Assistants</h3>
-                <p class="subtitle">dotdotdash · technology monthly</p>
+            <section data-background-color="#F7F5F2">
+                <div class="morse">
+                    <div class="dit"></div>
+                    <div class="dit"></div>
+                    <div class="dah"></div>
+                </div>
+                <h1 style="color: #0A0A09;">Dev-Toolkit</h1>
+                <h3 style="color: #0A0A09;">A Shared Brain for AI Assistants</h3>
+                <p class="subtitle" style="color: #CCC9C6;">dotdotdash · technology monthly</p>
                 <aside class="notes">
                     Quick show of hands: how many of you use an AI coding assistant at least once a week?
                     Keep your hand up if you've had to re-explain your team's conventions to it more than once.
@@ -289,9 +325,9 @@
                 <br>
                 <div class="cta">
                     <p style="font-size: 0.8em; margin: 0; line-height: 2;">
-                        <span class="accent">Get started →</span> docs/getting-started.md<br>
-                        <span class="accent">Not a developer? →</span> docs/skills-for-everyone.md<br>
-                        <span class="accent">Need a new skill? →</span> templates/request-skill.md
+                        <span class="accent">Get started →</span> <a href="https://github.com/dotdotdashdev/0000_dev_toolkit/blob/main/docs/getting-started.md">getting-started.md</a><br>
+                        <span class="accent">Not a developer? →</span> <a href="https://github.com/dotdotdashdev/0000_dev_toolkit/blob/main/docs/skills-for-everyone.md">skills-for-everyone.md</a><br>
+                        <span class="accent">Need a new skill? →</span> <a href="https://github.com/dotdotdashdev/0000_dev_toolkit/blob/main/templates/request-skill.md">request-skill.md</a>
                     </p>
                 </div>
                 <br>
