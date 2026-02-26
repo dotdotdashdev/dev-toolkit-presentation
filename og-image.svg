@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <rect width="1200" height="630" fill="#0A0A09"/>
   <rect x="0" y="0" width="1200" height="4" fill="#D7FF35" opacity="0.6"/>
-  <text x="600" y="240" text-anchor="middle" fill="#F7F5F2" font-family="Saans, system-ui, sans-serif" font-size="72" font-weight="570">Agentic Toolkit</text>
+  <text x="600" y="240" text-anchor="middle" fill="#F7F5F2" font-family="Saans, system-ui, sans-serif" font-size="72" font-weight="570">Dot Toolkit</text>
   <text x="600" y="320" text-anchor="middle" fill="#D7FF35" font-family="Saans, system-ui, sans-serif" font-size="30" font-weight="570">A Shared Brain for AI Assistants</text>
   <line x1="500" y1="370" x2="700" y2="370" stroke="#333" stroke-width="1"/>
   <text x="600" y="420" text-anchor="middle" fill="#CCC9C6" font-family="Saans SemiMono, monospace" font-size="18" font-weight="570" text-transform="uppercase" letter-spacing="0.05em">DOTDOTDASH · TECHNOLOGY MONTHLY</text>
