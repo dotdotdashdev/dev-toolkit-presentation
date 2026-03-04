@@ -148,7 +148,7 @@
                 </div>
                 <h1 style="color: #0A0A09;">Dot Toolkit</h1>
                 <h3 style="color: #0A0A09;">A Shared Brain for AI Assistants</h3>
-                <p class="subtitle" style="color: #0A0A09; opacity: 0.5;">dotdotdash · technology monthly</p>
+                <p class="subtitle" style="color: #0A0A09; opacity: 0.5;">dotdotdash · cross-team kickoff</p>
                 <aside class="notes">
                     Quick show of hands: how many of you use an AI coding assistant at least once a week?
                     Keep your hand up if you've had to re-explain your team's conventions to it more than once.
@@ -161,13 +161,14 @@
                 <p style="font-size: 1.1em;">Every AI session starts from <span class="accent">zero</span>.</p>
                 <br>
                 <ul>
-                    <li class="fragment">No memory of your branch naming conventions</li>
-                    <li class="fragment">No knowledge of your deploy targets</li>
+                    <li class="fragment">No memory of your team's naming conventions or standards</li>
+                    <li class="fragment">No knowledge of your project's history, goals, or constraints</li>
                     <li class="fragment">No shared context across the team</li>
                     <li class="fragment">Everyone builds their own prompts — <span class="dim">none of it shared</span></li>
                 </ul>
                 <aside class="notes">
                     This is the core problem. Every new session is a blank slate.
+                    Devs re-explain branch conventions. Designers re-explain creative tenets. Producers re-explain project timelines.
                     At team scale it gets worse — everyone has their own prompt snippets, their own workarounds, none of it version controlled or shared.
                 </aside>
             </section>
@@ -199,7 +200,7 @@
                             Deploy to Render<br>
                             Evaluate an RFP<br>
                             Implement a Figma design<br>
-                            Debug failing CI
+                            Review a brief or proposal
                         </p>
                     </div>
                     <div class="concept-box context-box">
@@ -226,17 +227,17 @@
             <section>
                 <h2>Works Everywhere</h2>
                 <p style="font-size: 0.8em; margin-bottom: 1em;">Same skills, same context — any tool.</p>
-                <div class="platform-grid">
-                    <div class="platform-item">Warp / Oz</div>
-                    <div class="platform-item">Claude Code</div>
-                    <div class="platform-item">Cursor</div>
-                    <div class="platform-item">Codex</div>
+                <div class="platform-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="platform-item"><span class="accent" style="font-size: 0.85em; display: block; margin-bottom: 0.3em;">Anthropic</span>Claude · Claude Code</div>
+                    <div class="platform-item"><span class="accent" style="font-size: 0.85em; display: block; margin-bottom: 0.3em;">OpenAI</span>ChatGPT · Codex</div>
+                    <div class="platform-item"><span class="accent" style="font-size: 0.85em; display: block; margin-bottom: 0.3em;">Multi-model</span>Warp / Oz · Cursor</div>
                 </div>
                 <br>
-                <p class="dim" style="font-size: 0.65em;">Each tool reads from the same source of truth. No lock-in.</p>
+                <p class="dim" style="font-size: 0.65em;">Same skills, same context — regardless of provider. No lock-in.</p>
                 <aside class="notes">
-                    You're not locked into any one tool.
+                    You're not locked into any one provider or tool.
                     Skills and context are just markdown files — each AI tool has its own config that points to them.
+                    Whether you use Claude, ChatGPT, or a multi-model tool like Warp, the same shared knowledge works everywhere.
                 </aside>
             </section>
 
@@ -268,42 +269,82 @@
                 </aside>
             </section>
 
-            <!-- 7: Demo -->
+            <!-- 7: How to Get Started -->
             <section data-background-color="#F7F5F2">
-                <h2 style="color: #0A0A09;">Demo</h2>
+                <h2 style="color: #0A0A09;">How It Works</h2>
+                <br>
                 <div class="workflow-arrow">
-                    <span style="color: #0A0A09; font-weight: 570;">Brainstorming</span>
+                    <span style="color: #0A0A09; font-weight: 570;">Clone the repo</span>
                     <span style="color: #CCC9C6;"> → </span>
-                    <span style="color: #D7FF35; background: #0A0A09; padding: 0.05em 0.2em; border-radius: 4px;">Writing Plans</span>
+                    <span style="color: #0A0A09; font-weight: 570;">Pick your AI tool</span>
+                    <span style="color: #CCC9C6;"> → </span>
+                    <span style="color: #D7FF35; background: #0A0A09; padding: 0.05em 0.2em; border-radius: 4px;">Describe what you need</span>
                 </div>
                 <br>
-                <p style="color: #0A0A09; font-size: 0.7em;">From a vague idea to an implementation-ready plan</p>
+                <p style="color: #0A0A09; font-size: 0.7em;">The AI reads the skills and context automatically.<br>You just ask for what you want in plain language.</p>
                 <aside class="notes">
-                    Live demo. Start with a vague feature idea.
-                    Show the AI using the brainstorming skill to shape it through dialogue,
-                    then transition to writing plans to break it into implementable steps.
-                    Key callout: you didn't tell it which skill to use — routing happened automatically.
+                    Three steps. Clone the shared repo. Open your preferred AI tool. Ask for what you need.
+                    The AI reads the skills and context files and routes to the right one.
+                    Live walkthrough available if we have time — but the point is it's this simple.
                 </aside>
             </section>
 
-            <!-- 8: Where We're Headed -->
+            <!-- 8: Shared Context -->
             <section>
-                <h2>Where We're Headed</h2>
+                <h2>Shared Context — What We're Exploring</h2>
+                <p style="font-size: 0.85em; margin-bottom: 0.8em;">
+                    The bigger opportunity: <span class="accent">sharing project context</span> across teams and their agents.
+                </p>
+                <div class="two-col" style="font-size: 0.75em;">
+                    <div class="concept-box">
+                        <h3 class="accent">What to share</h3>
+                        <p class="dim" style="font-size: 0.85em;">
+                            Project background &amp; goals<br>
+                            Plans, tasks, and statuses<br>
+                            Conventions &amp; standards
+                        </p>
+                    </div>
+                    <div class="concept-box context-box">
+                        <h3 class="highlight">How we're exploring it</h3>
+                        <p class="dim" style="font-size: 0.85em;">
+                            MCP server (structured to-dos, human-readable)<br>
+                            Plans &amp; tasks stored in GitHub<br>
+                            SurrealDB → flat files in repo<br>
+                            3rd party context &amp; orchestration tools
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <p class="dim" style="font-size: 0.6em;">All approaches keep content in GitHub with need-to-know data only in MCP — designed to limit client data exposure.</p>
+                <aside class="notes">
+                    This is where it gets interesting beyond skills.
+                    We want agents and people to share context — project background, task statuses, who's blocked on what.
+                    We're exploring multiple methods: an MCP server that can serve structured to-dos and is human-readable,
+                    storing plans and to-dos in GitHub, using SurrealDB to render data into flat files shared in repo,
+                    and evaluating 3rd party tooling for context management and agent orchestration.
+                    All of these keep content in GitHub by default. Only need-to-know data lives in MCP.
+                    Ideally this would be a company-approved cloud system, but we've been blocked on that — so we're working within constraints.
+                </aside>
+            </section>
+
+            <!-- 9: Vision -->
+            <section>
+                <h2>Where This Is Going</h2>
                 <p style="font-size: 0.9em; margin-bottom: 0.8em;">
-                    This is a <span class="accent">flag in the ground</span>.
+                    This is a <span class="accent">flag in the ground</span> on the path to orchestrating automated agents.
                 </p>
                 <ul class="honest-list">
                     <li class="fragment">
-                        <strong>Works today:</strong> skills and context that make AI assistants
-                        meaningfully better at day-to-day work
+                        <strong>Today:</strong> shared skills and context that make AI assistants
+                        meaningfully better across roles
                     </li>
                     <li class="fragment">
-                        <strong>Theoretical:</strong> shared context across agents and people —
-                        the MCP server exists but isn't battle-tested
+                        <strong>Next:</strong> shared project context and task statuses —
+                        enabling collaboration between teams and their agents
                     </li>
                     <li class="fragment">
-                        <strong>Emerging:</strong> entire.io, Temporal, and other tools that
-                        could reshape team-level AI context
+                        <strong>Ahead:</strong> orchestrated agents that can coordinate work,
+                        hand off tasks, and keep everyone in sync
                     </li>
                     <li class="fragment">
                         <strong>Certain:</strong> this problem isn't going away —
@@ -311,30 +352,35 @@
                     </li>
                 </ul>
                 <aside class="notes">
-                    Be honest. We're weeks into this, not months.
-                    The shared context server is theoretical — hasn't been tested with multiple people.
-                    Entire.io just launched and could be a big player. Temporal is on the radar but unexplored.
-                    What we DO have is a working set of skills that deliver value right now.
-                    The point: we started, and we're iterating.
+                    The skills repo is step one. Shared context is step two.
+                    The endgame is orchestrated agents that can work across teams — not replacing people, but coordinating work.
+                    We're building toward that incrementally. Each step delivers value on its own.
                 </aside>
             </section>
 
-            <!-- 9: CTA -->
+            <!-- 10: CTA -->
             <section data-background-color="#F7F5F2">
-                <h2 style="color: #0A0A09;">Try One Skill This Week</h2>
+                <h2 style="color: #0A0A09;">What We Need From You</h2>
+                <br>
+                <ul class="honest-list" style="color: #0A0A09; max-width: 680px;">
+                    <li class="fragment"><strong>Try it:</strong> pull the repo, set it up with your AI tool</li>
+                    <li class="fragment"><strong>Tell us:</strong> how easy or hard was setup?</li>
+                    <li class="fragment"><strong>Request:</strong> what skills would be useful for your role?</li>
+                    <li class="fragment"><strong>Test &amp; iterate:</strong> help us stress-test the workflow</li>
+                </ul>
                 <br>
                 <div class="cta">
                     <p style="font-size: 0.8em; margin: 0; line-height: 2;">
                         <span class="accent">Get started →</span> <a href="https://github.com/dotdotdashdev/0000_dev_toolkit/blob/main/docs/getting-started.md">getting-started.md</a><br>
                         <span class="accent">Not a developer? →</span> <a href="https://github.com/dotdotdashdev/0000_dev_toolkit/blob/main/docs/skills-for-everyone.md">skills-for-everyone.md</a><br>
-                        <span class="accent">Need a new skill? →</span> <a href="https://github.com/dotdotdashdev/0000_dev_toolkit/blob/main/templates/request-skill.md">request-skill.md</a>
+                        <span class="accent">Request a skill →</span> <a href="https://github.com/dotdotdashdev/0000_dev_toolkit/blob/main/templates/request-skill.md">request-skill.md</a>
                     </p>
                 </div>
-                <br>
-                <p style="color: #0A0A09; opacity: 0.5; font-size: 0.65em;">If a skill you need doesn't exist, request one.</p>
                 <aside class="notes">
-                    Low-stakes call to action. Try one skill this week.
-                    Barrier to entry: install your AI tool, point at the repo, describe what you want. That's it.
+                    Clear ask. We need people to actually try this and give us feedback.
+                    Setup difficulty is a real question — we need to know what's hard.
+                    Feature requests are gold. If a skill you need doesn't exist, tell us.
+                    This is early. Your feedback shapes what we build next.
                 </aside>
             </section>
 
