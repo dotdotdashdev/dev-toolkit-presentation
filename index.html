@@ -133,6 +133,7 @@
         .cta a:hover {
             text-decoration: underline;
         }
+
     </style>
 </head>
 <body>
@@ -156,10 +157,8 @@
             </section>
 
             <!-- 2: Cool Hand Luke -->
-            <section>
-                <h2 style="font-size: 1.8em; font-style: italic; line-height: 1.3;">"What we've got here is<br>a failure to communicate."</h2>
-                <br>
-                <p class="dim" style="font-size: 0.65em;">Cool Hand Luke, 1967</p>
+            <section data-background-video="cool-hand-luke-clip.mp4" data-background-video-loop="false" data-background-video-muted="false" data-background-size="cover" data-background-color="#000">
+                <p class="dim" style="font-size: 0.55em; position: absolute; bottom: 0; right: 1em; margin: 0;">Cool Hand Luke, 1967</p>
                 <aside class="notes">
                     A little dramatic, but not wrong.
                     Every AI session is a communication failure. You know how your team works. The AI doesn't. That's the gap.
@@ -184,7 +183,238 @@
                 </aside>
             </section>
 
-            <!-- 3: What Is It -->
+            <!-- 3a: Diagram — Isolated Sessions -->
+            <section>
+                <h2>Today: <span class="dim">Isolated Sessions</span></h2>
+                <p class="dim" style="font-size: 0.7em; margin-bottom: 0.8em;">Every AI session starts from scratch. Everyone reinvents the wheel.</p>
+                <div style="display: flex; justify-content: center;">
+                    <svg viewBox="0 0 840 280" style="max-width: 780px;" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Silo borders -->
+                        <rect x="20" y="5" width="240" height="250" rx="8" fill="none" stroke="#555" stroke-width="1" stroke-dasharray="6 4"/>
+                        <rect x="300" y="5" width="240" height="250" rx="8" fill="none" stroke="#555" stroke-width="1" stroke-dasharray="6 4"/>
+                        <rect x="580" y="5" width="240" height="250" rx="8" fill="none" stroke="#555" stroke-width="1" stroke-dasharray="6 4"/>
+
+                        <!-- Person A -->
+                        <circle cx="140" cy="30" r="6" fill="none" stroke="#CCC9C6" stroke-width="1.5"/>
+                        <path d="M128,44 Q140,54 152,44" fill="none" stroke="#CCC9C6" stroke-width="1.5"/>
+                        <line x1="140" y1="50" x2="140" y2="72" stroke="#CCC9C6" stroke-width="1" opacity="0.3"/>
+                        <rect x="85" y="72" width="110" height="30" rx="5" fill="rgba(204,201,198,0.06)" stroke="#CCC9C6" stroke-width="1" opacity="0.5"/>
+                        <text x="140" y="91" text-anchor="middle" fill="#CCC9C6" font-size="10" font-family="system-ui" opacity="0.6">AI Session</text>
+                        <line x1="140" y1="102" x2="140" y2="122" stroke="#CCC9C6" stroke-width="1" opacity="0.2"/>
+                        <rect x="50" y="122" width="180" height="110" rx="5" fill="rgba(204,201,198,0.03)" stroke="#CCC9C6" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.3"/>
+                        <text x="140" y="147" text-anchor="middle" fill="#CCC9C6" font-size="9" font-family="monospace" opacity="0.35">deploy-script.txt</text>
+                        <text x="140" y="164" text-anchor="middle" fill="#CCC9C6" font-size="9" font-family="monospace" opacity="0.35">branch-tips.md</text>
+                        <text x="140" y="181" text-anchor="middle" fill="#CCC9C6" font-size="9" font-family="monospace" opacity="0.35">code-style.txt</text>
+                        <text x="140" y="222" text-anchor="middle" fill="#CCC9C6" font-size="8" font-family="system-ui" font-style="italic" opacity="0.2">personal prompts</text>
+
+                        <!-- X between A and B -->
+                        <text x="270" y="150" text-anchor="middle" fill="#CCC9C6" font-size="18" opacity="0.15">✗</text>
+
+                        <!-- Person B -->
+                        <circle cx="420" cy="30" r="6" fill="none" stroke="#CCC9C6" stroke-width="1.5"/>
+                        <path d="M408,44 Q420,54 432,44" fill="none" stroke="#CCC9C6" stroke-width="1.5"/>
+                        <line x1="420" y1="50" x2="420" y2="72" stroke="#CCC9C6" stroke-width="1" opacity="0.3"/>
+                        <rect x="365" y="72" width="110" height="30" rx="5" fill="rgba(204,201,198,0.06)" stroke="#CCC9C6" stroke-width="1" opacity="0.5"/>
+                        <text x="420" y="91" text-anchor="middle" fill="#CCC9C6" font-size="10" font-family="system-ui" opacity="0.6">AI Session</text>
+                        <line x1="420" y1="102" x2="420" y2="122" stroke="#CCC9C6" stroke-width="1" opacity="0.2"/>
+                        <rect x="330" y="122" width="180" height="110" rx="5" fill="rgba(204,201,198,0.03)" stroke="#CCC9C6" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.3"/>
+                        <text x="420" y="147" text-anchor="middle" fill="#CCC9C6" font-size="9" font-family="monospace" opacity="0.35">deploy-v2.md</text>
+                        <text x="420" y="164" text-anchor="middle" fill="#CCC9C6" font-size="9" font-family="monospace" opacity="0.35">naming-rules.txt</text>
+                        <text x="420" y="181" text-anchor="middle" fill="#CCC9C6" font-size="9" font-family="monospace" opacity="0.35">pr-template</text>
+                        <text x="420" y="222" text-anchor="middle" fill="#CCC9C6" font-size="8" font-family="system-ui" font-style="italic" opacity="0.2">personal prompts</text>
+
+                        <!-- X between B and C -->
+                        <text x="550" y="150" text-anchor="middle" fill="#CCC9C6" font-size="18" opacity="0.15">✗</text>
+
+                        <!-- Person C -->
+                        <circle cx="700" cy="30" r="6" fill="none" stroke="#CCC9C6" stroke-width="1.5"/>
+                        <path d="M688,44 Q700,54 712,44" fill="none" stroke="#CCC9C6" stroke-width="1.5"/>
+                        <line x1="700" y1="50" x2="700" y2="72" stroke="#CCC9C6" stroke-width="1" opacity="0.3"/>
+                        <rect x="645" y="72" width="110" height="30" rx="5" fill="rgba(204,201,198,0.06)" stroke="#CCC9C6" stroke-width="1" opacity="0.5"/>
+                        <text x="700" y="91" text-anchor="middle" fill="#CCC9C6" font-size="10" font-family="system-ui" opacity="0.6">AI Session</text>
+                        <line x1="700" y1="102" x2="700" y2="122" stroke="#CCC9C6" stroke-width="1" opacity="0.2"/>
+                        <rect x="610" y="122" width="180" height="110" rx="5" fill="rgba(204,201,198,0.03)" stroke="#CCC9C6" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.3"/>
+                        <text x="700" y="147" text-anchor="middle" fill="#CCC9C6" font-size="9" font-family="monospace" opacity="0.35">deploy-hack.sh</text>
+                        <text x="700" y="164" text-anchor="middle" fill="#CCC9C6" font-size="9" font-family="monospace" opacity="0.35">style-guide.md</text>
+                        <text x="700" y="181" text-anchor="middle" fill="#CCC9C6" font-size="9" font-family="monospace" opacity="0.35">git-cmds.txt</text>
+                        <text x="700" y="222" text-anchor="middle" fill="#CCC9C6" font-size="8" font-family="system-ui" font-style="italic" opacity="0.2">personal prompts</text>
+
+                        <!-- Bottom annotation -->
+                        <text x="420" y="272" text-anchor="middle" fill="#CCC9C6" font-size="11" font-family="system-ui" opacity="0.3">No sharing · No version control · No consistency</text>
+                    </svg>
+                </div>
+                <aside class="notes">
+                    This is what it looks like today. Three people, three completely separate AI sessions.
+                    Each person has their own prompts, their own workarounds. They're all solving the same problems — deploy, naming, standards — but in different, inconsistent ways.
+                    Nothing is shared. Nothing is version controlled.
+                </aside>
+            </section>
+
+            <!-- 3b: Diagram — Shared Skills -->
+            <section>
+                <h2>Step 1: <span class="accent">Shared Skills</span></h2>
+                <p class="dim" style="font-size: 0.7em; margin-bottom: 0.8em;">Same playbooks, every session. Write once, use everywhere.</p>
+                <div style="display: flex; justify-content: center;">
+                    <svg viewBox="0 0 840 290" style="max-width: 780px;" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Person A -->
+                        <circle cx="140" cy="30" r="6" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <path d="M128,44 Q140,54 152,44" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <line x1="140" y1="50" x2="140" y2="72" stroke="#F7F5F2" stroke-width="1" opacity="0.4"/>
+                        <rect x="85" y="72" width="110" height="30" rx="5" fill="rgba(215,255,53,0.06)" stroke="#D7FF35" stroke-width="1" opacity="0.5"/>
+                        <text x="140" y="91" text-anchor="middle" fill="#D7FF35" font-size="10" font-family="system-ui" opacity="0.7">AI Session</text>
+
+                        <!-- Person B -->
+                        <circle cx="420" cy="30" r="6" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <path d="M408,44 Q420,54 432,44" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <line x1="420" y1="50" x2="420" y2="72" stroke="#F7F5F2" stroke-width="1" opacity="0.4"/>
+                        <rect x="365" y="72" width="110" height="30" rx="5" fill="rgba(215,255,53,0.06)" stroke="#D7FF35" stroke-width="1" opacity="0.5"/>
+                        <text x="420" y="91" text-anchor="middle" fill="#D7FF35" font-size="10" font-family="system-ui" opacity="0.7">AI Session</text>
+
+                        <!-- Person C -->
+                        <circle cx="700" cy="30" r="6" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <path d="M688,44 Q700,54 712,44" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <line x1="700" y1="50" x2="700" y2="72" stroke="#F7F5F2" stroke-width="1" opacity="0.4"/>
+                        <rect x="645" y="72" width="110" height="30" rx="5" fill="rgba(215,255,53,0.06)" stroke="#D7FF35" stroke-width="1" opacity="0.5"/>
+                        <text x="700" y="91" text-anchor="middle" fill="#D7FF35" font-size="10" font-family="system-ui" opacity="0.7">AI Session</text>
+
+                        <!-- Lines from agents to shared block -->
+                        <line x1="140" y1="102" x2="140" y2="170" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
+                        <line x1="420" y1="102" x2="420" y2="170" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
+                        <line x1="700" y1="102" x2="700" y2="170" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
+
+                        <!-- Shared Skills Block -->
+                        <rect x="70" y="170" width="700" height="70" rx="6" fill="rgba(215,255,53,0.04)" stroke="#D7FF35" stroke-width="1.5"/>
+                        <text x="420" y="195" text-anchor="middle" fill="#D7FF35" font-size="12" font-weight="500" font-family="system-ui">Shared Skills</text>
+                        <text x="420" y="215" text-anchor="middle" fill="#D7FF35" font-size="9" font-family="monospace" opacity="0.6">render-deploy · figma-design · debugging · code-review · tdd · writing-plans</text>
+                        <text x="420" y="230" text-anchor="middle" fill="#D7FF35" font-size="8" font-family="system-ui" font-style="italic" opacity="0.4">version-controlled · platform-agnostic · same for everyone</text>
+
+                        <!-- Context gap indicator -->
+                        <text x="420" y="272" text-anchor="middle" fill="#CCC9C6" font-size="10" font-family="system-ui" opacity="0.35">⚠ but project context still resets every session</text>
+                    </svg>
+                </div>
+                <aside class="notes">
+                    First improvement: shared skills. Instead of everyone writing their own deploy script or naming rules, there's ONE shared set of playbooks.
+                    The AI reads from the same skills repo. Version controlled. Platform agnostic. Same knowledge, every session.
+                    But there's still a gap: project context — conventions, task statuses, project background — still resets every session.
+                </aside>
+            </section>
+
+            <!-- 3c: Diagram — Shared Skills + Context -->
+            <section>
+                <h2>Step 2: <span class="accent">Skills</span> + <span class="highlight">Context</span></h2>
+                <p class="dim" style="font-size: 0.7em; margin-bottom: 0.8em;">Agents know your playbooks AND your project conventions.</p>
+                <div style="display: flex; justify-content: center;">
+                    <svg viewBox="0 0 840 310" style="max-width: 780px;" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Person A -->
+                        <circle cx="140" cy="30" r="6" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <path d="M128,44 Q140,54 152,44" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <line x1="140" y1="50" x2="140" y2="72" stroke="#F7F5F2" stroke-width="1" opacity="0.4"/>
+                        <rect x="85" y="72" width="110" height="30" rx="5" fill="rgba(215,255,53,0.06)" stroke="#D7FF35" stroke-width="1" opacity="0.6"/>
+                        <text x="140" y="91" text-anchor="middle" fill="#D7FF35" font-size="10" font-family="system-ui" opacity="0.8">AI Session</text>
+
+                        <!-- Person B -->
+                        <circle cx="420" cy="30" r="6" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <path d="M408,44 Q420,54 432,44" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <line x1="420" y1="50" x2="420" y2="72" stroke="#F7F5F2" stroke-width="1" opacity="0.4"/>
+                        <rect x="365" y="72" width="110" height="30" rx="5" fill="rgba(215,255,53,0.06)" stroke="#D7FF35" stroke-width="1" opacity="0.6"/>
+                        <text x="420" y="91" text-anchor="middle" fill="#D7FF35" font-size="10" font-family="system-ui" opacity="0.8">AI Session</text>
+
+                        <!-- Person C -->
+                        <circle cx="700" cy="30" r="6" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <path d="M688,44 Q700,54 712,44" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <line x1="700" y1="50" x2="700" y2="72" stroke="#F7F5F2" stroke-width="1" opacity="0.4"/>
+                        <rect x="645" y="72" width="110" height="30" rx="5" fill="rgba(215,255,53,0.06)" stroke="#D7FF35" stroke-width="1" opacity="0.6"/>
+                        <text x="700" y="91" text-anchor="middle" fill="#D7FF35" font-size="10" font-family="system-ui" opacity="0.8">AI Session</text>
+
+                        <!-- Lines from agents to shared blocks -->
+                        <line x1="140" y1="102" x2="140" y2="158" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
+                        <line x1="420" y1="102" x2="420" y2="158" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
+                        <line x1="700" y1="102" x2="700" y2="158" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
+
+                        <!-- Shared Skills Block -->
+                        <rect x="70" y="158" width="700" height="52" rx="6" fill="rgba(215,255,53,0.04)" stroke="#D7FF35" stroke-width="1.5"/>
+                        <text x="130" y="180" fill="#D7FF35" font-size="11" font-weight="500" font-family="system-ui">● Skills</text>
+                        <text x="480" y="195" text-anchor="middle" fill="#D7FF35" font-size="9" font-family="monospace" opacity="0.6">render-deploy · figma-design · debugging · code-review · tdd · writing-plans</text>
+
+                        <!-- Shared Context Block -->
+                        <rect x="70" y="220" width="700" height="52" rx="6" fill="rgba(247,245,242,0.04)" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <text x="130" y="242" fill="#F7F5F2" font-size="11" font-weight="500" font-family="system-ui">■ Context</text>
+                        <text x="480" y="257" text-anchor="middle" fill="#F7F5F2" font-size="9" font-family="monospace" opacity="0.6">github-workflow · creative-tenets · context-engineering · multi-agent-coordination</text>
+
+                        <!-- Bottom annotation -->
+                        <text x="420" y="300" text-anchor="middle" fill="#CCC9C6" font-size="10" font-family="system-ui" opacity="0.35">Agents know how to do things AND how your team works</text>
+                    </svg>
+                </div>
+                <aside class="notes">
+                    Second improvement: shared context. Now agents don't just know what to do — they know how your team works.
+                    GitHub workflow, creative tenets, naming standards, coordination protocols.
+                    Skills plus context means the AI starts every session already aligned with your team.
+                </aside>
+            </section>
+
+            <!-- 3d: Diagram — Cloud Agents -->
+            <section>
+                <h2>Step 3: <span class="accent">Cloud Agents</span></h2>
+                <p class="dim" style="font-size: 0.7em; margin-bottom: 0.8em;">Orchestrated agents that coordinate work across the team.</p>
+                <div style="display: flex; justify-content: center;">
+                    <svg viewBox="0 0 840 310" style="max-width: 780px;" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Person A -->
+                        <circle cx="140" cy="25" r="6" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <path d="M128,39 Q140,49 152,39" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <line x1="140" y1="45" x2="140" y2="65" stroke="#F7F5F2" stroke-width="1" opacity="0.4"/>
+                        <!-- Cloud Agent A -->
+                        <rect x="75" y="65" width="130" height="34" rx="5" fill="rgba(215,255,53,0.1)" stroke="#D7FF35" stroke-width="1.5"/>
+                        <text x="140" y="86" text-anchor="middle" fill="#D7FF35" font-size="10" font-weight="500" font-family="system-ui">☁ Cloud Agent</text>
+
+                        <!-- Person B -->
+                        <circle cx="420" cy="25" r="6" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <path d="M408,39 Q420,49 432,39" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <line x1="420" y1="45" x2="420" y2="65" stroke="#F7F5F2" stroke-width="1" opacity="0.4"/>
+                        <rect x="355" y="65" width="130" height="34" rx="5" fill="rgba(215,255,53,0.1)" stroke="#D7FF35" stroke-width="1.5"/>
+                        <text x="420" y="86" text-anchor="middle" fill="#D7FF35" font-size="10" font-weight="500" font-family="system-ui">☁ Cloud Agent</text>
+
+                        <!-- Person C -->
+                        <circle cx="700" cy="25" r="6" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <path d="M688,39 Q700,49 712,39" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <line x1="700" y1="45" x2="700" y2="65" stroke="#F7F5F2" stroke-width="1" opacity="0.4"/>
+                        <rect x="635" y="65" width="130" height="34" rx="5" fill="rgba(215,255,53,0.1)" stroke="#D7FF35" stroke-width="1.5"/>
+                        <text x="700" y="86" text-anchor="middle" fill="#D7FF35" font-size="10" font-weight="500" font-family="system-ui">☁ Cloud Agent</text>
+
+                        <!-- Agent-to-agent bidirectional connections -->
+                        <line x1="205" y1="82" x2="355" y2="82" stroke="#D7FF35" stroke-width="1" opacity="0.4" stroke-dasharray="4 3"/>
+                        <polygon points="351,79 359,82 351,85" fill="#D7FF35" opacity="0.4"/>
+                        <polygon points="209,79 201,82 209,85" fill="#D7FF35" opacity="0.4"/>
+                        <line x1="485" y1="82" x2="635" y2="82" stroke="#D7FF35" stroke-width="1" opacity="0.4" stroke-dasharray="4 3"/>
+                        <polygon points="631,79 639,82 631,85" fill="#D7FF35" opacity="0.4"/>
+                        <polygon points="489,79 481,82 489,85" fill="#D7FF35" opacity="0.4"/>
+
+                        <!-- Lines from agents to shared blocks -->
+                        <line x1="140" y1="99" x2="140" y2="148" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
+                        <line x1="420" y1="99" x2="420" y2="148" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
+                        <line x1="700" y1="99" x2="700" y2="148" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
+
+                        <!-- Shared Skills Block -->
+                        <rect x="70" y="148" width="700" height="50" rx="6" fill="rgba(215,255,53,0.04)" stroke="#D7FF35" stroke-width="1.5"/>
+                        <text x="130" y="169" fill="#D7FF35" font-size="11" font-weight="500" font-family="system-ui">● Skills</text>
+                        <text x="480" y="183" text-anchor="middle" fill="#D7FF35" font-size="9" font-family="monospace" opacity="0.6">render-deploy · figma-design · debugging · code-review · oz-orchestrated-build</text>
+
+                        <!-- Shared Context Block -->
+                        <rect x="70" y="208" width="700" height="50" rx="6" fill="rgba(247,245,242,0.04)" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <text x="130" y="229" fill="#F7F5F2" font-size="11" font-weight="500" font-family="system-ui">■ Context</text>
+                        <text x="480" y="243" text-anchor="middle" fill="#F7F5F2" font-size="9" font-family="monospace" opacity="0.6">github-workflow · creative-tenets · multi-agent-coordination · project background</text>
+
+                        <!-- Bottom annotation -->
+                        <text x="420" y="295" text-anchor="middle" fill="#D7FF35" font-size="10" font-family="system-ui" opacity="0.5">Agents coordinate work · hand off tasks · keep everyone in sync</text>
+                    </svg>
+                </div>
+                <aside class="notes">
+                    The endgame: cloud agents that can coordinate. Not just reading from the same skills and context, but actively working together.
+                    Agents can hand off tasks, share status, and keep the whole team in sync.
+                    This is where tools like Warp Oz come in — orchestrating automated agents across projects.
+                </aside>
+            </section>
+
+            <!-- 4: What Is It -->
             <section>
                 <h2>What is the Dot Toolkit?</h2>
                 <p style="font-size: 1em;">
@@ -439,6 +669,33 @@
             plugins: [RevealNotes],
             width: 1280,
             height: 720,
+        }).then(function() {
+            // Browser autoplay policy requires a user gesture before audio can play.
+            // On first click/key, unlock audio for all background videos.
+            var audioUnlocked = false;
+            function unlockAudio() {
+                if (audioUnlocked) return;
+                audioUnlocked = true;
+                document.querySelectorAll('.slide-background video').forEach(function(v) {
+                    v.muted = false;
+                });
+                // If we're already on the video slide, restart it with audio
+                var bg = document.querySelector('.slide-background.present video');
+                if (bg) { bg.muted = false; bg.currentTime = 0; bg.play(); }
+            }
+            document.addEventListener('click', unlockAudio, { once: true });
+            document.addEventListener('keydown', unlockAudio, { once: true });
+
+            Reveal.on('slidechanged', function(event) {
+                var bg = document.querySelector('.slide-background.present video');
+                if (bg) {
+                    if (audioUnlocked) bg.muted = false;
+                    bg.currentTime = 0;
+                    bg.play();
+                }
+                var prevBg = document.querySelector('.slide-background.past video');
+                if (prevBg) { prevBg.muted = true; prevBg.pause(); }
+            });
         });
     </script>
 </body>
