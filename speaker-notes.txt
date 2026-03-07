@@ -1,0 +1,101 @@
+DOT TOOLKIT: SPEAKER NOTES
+===========================
+
+SLIDE 1: TITLE
+Quick show of hands: how many of you use an AI assistant at least once a week?
+Keep your hand up if you've had to re-explain your team's conventions to it more than once.
+
+SLIDE 2: COOL HAND LUKE
+A little dramatic, but not wrong.
+Every AI session is a communication failure. You know how your team works. The AI doesn't. That's the gap.
+
+SLIDE 3: THE PROBLEM
+Every new session is a blank slate.
+Devs re-explain branch conventions. Designers re-explain creative tenets. Producers re-explain project timelines.
+At team scale it gets worse. Everyone has their own prompt snippets, their own workarounds, none of it version controlled or shared.
+
+SLIDE 4: WHAT IS IT
+One sentence pitch. It's a shared repo. Skills and context files. Any AI tool reads them.
+Your assistant starts the session already knowing your conventions.
+
+SLIDE 5: SKILLS VS CONTEXT
+Skills tell the AI WHAT to do. Context tells it HOW to behave.
+Both are just markdown files in a repo.
+You don't need to be technical to write or request either one.
+
+SLIDE 6: WORKS EVERYWHERE
+You're not locked into any one provider or tool.
+Skills and context are just markdown files. Each AI tool has its own config that points to them.
+Whether you use Claude, ChatGPT, or a multi-model tool like Warp, the same shared knowledge works everywhere.
+
+SLIDE 7: NOT JUST FOR DEVELOPERS
+You don't need to know which skill to use. Just describe what you want.
+The AI picks the right skill. This isn't just a developer tool.
+Designers can use creative tenets as a review lens. Producers can get project status.
+Strategy can explore how emerging tech creates new opportunities for clients.
+
+SLIDE 8: WHERE WE ARE
+This isn't a pitch deck for something we plan to build. The repo exists, the dev team is using it daily.
+Skills work. Context works. Setup docs are written.
+But we're early. We need more people using it, more feedback, and more skills.
+
+SLIDE 9: SHARED CONTEXT
+This is where it gets interesting beyond skills.
+We want agents and people to share context: project background, task statuses, who's blocked on what.
+We're exploring multiple methods:
+  - An MCP server that can serve structured to-dos and is human-readable
+  - Storing plans and to-dos in GitHub
+  - Using SurrealDB to render data into flat files shared in repo
+  - Evaluating 3rd party tooling for context management and agent orchestration
+All of these keep content in GitHub by default. Only need-to-know data lives in MCP.
+Ideally this would be a company-approved cloud system, but we've been blocked on that, so we're working within constraints.
+
+SLIDE 10: WHERE THIS IS GOING
+The skills repo is step one. Shared context is step two.
+The endgame is orchestrated agents that can work across teams. Not replacing people, but coordinating work.
+We're building toward that incrementally. Each step delivers value on its own.
+
+SLIDE 11: WHAT WE NEED FROM YOU
+Clear ask. We need people to actually try this and give us feedback.
+Setup difficulty is a real question. We need to know what's hard.
+Feature requests are gold. If a skill you need doesn't exist, tell us.
+This is early. Your feedback shapes what we build next.
+
+SLIDE 12: DISCUSSION
+Open it up. Use the questions on screen as prompts. Let the conversation flow naturally.
+
+
+===========================
+DISCUSSION QUESTIONS (REFERENCE)
+===========================
+
+Feedback channel:
+  How should we handle feedback and feature requests?
+  A Teams channel? A simple web form? GitHub issues? What's lowest friction for everyone?
+
+Agent surfaces:
+  What AI tools is everyone using day-to-day?
+  Claude, ChatGPT, Warp, Cursor, something else?
+
+Skills and plugins:
+  Who here is already using skills, plugins, or custom instructions in their AI tools?
+  Anyone building automations or specialized agents/bots?
+
+Setup support:
+  Does anyone need help getting set up?
+  We have docs, but happy to pair on it or do a walkthrough.
+
+GitHub access:
+  Who's comfortable with GitHub?
+  For those who aren't, what would make it easier to pull skills into your workflow?
+
+Role-specific needs:
+  What's one task in your role that you wish an AI assistant already knew how to do?
+
+Context sharing:
+  What project info do you find yourself repeating most often to collaborators or tools?
+  Would shared task statuses or project background docs be useful for your workflow?
+
+Security and data:
+  Any concerns about what kind of data lives where?
+  We're keeping things in GitHub with minimal data in MCP, but want to hear your comfort level.
