@@ -149,7 +149,7 @@
                 </div>
                 <h1 style="color: #0A0A09;">Dot Toolkit</h1>
                 <h3 style="color: #0A0A09;">A Shared Brain for AI Assistants</h3>
-                <p class="subtitle" style="color: #0A0A09; opacity: 0.5;">dotdotdash · cross-team kickoff</p>
+                <p class="subtitle" style="color: #0A0A09; opacity: 0.5;">dotdotdash</p>
                 <aside class="notes">
                     Quick show of hands: how many of you use an AI coding assistant at least once a week?
                     Keep your hand up if you've had to re-explain your team's conventions to it more than once.
@@ -250,12 +250,12 @@
                 </aside>
             </section>
 
-            <!-- 3b: Diagram — Shared Skills -->
+            <!-- 3b: Diagram — Shared Skills + General Context -->
             <section>
-                <h2>Step 1: <span class="accent">Shared Skills</span></h2>
-                <p class="dim" style="font-size: 0.7em; margin-bottom: 0.8em;">Same playbooks, every session. Write once, use everywhere.</p>
+                <h2>Step 1: <span class="accent">Skills</span> + <span class="highlight">General Context</span></h2>
+                <p class="dim" style="font-size: 0.7em; margin-bottom: 0.8em;">Shared playbooks and working rules. Every session starts aligned.</p>
                 <div style="display: flex; justify-content: center;">
-                    <svg viewBox="0 0 840 290" style="max-width: 780px;" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 840 310" style="max-width: 780px;" xmlns="http://www.w3.org/2000/svg">
                         <!-- Person A -->
                         <circle cx="140" cy="30" r="6" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
                         <path d="M128,44 Q140,54 152,44" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
@@ -277,34 +277,39 @@
                         <rect x="645" y="72" width="110" height="30" rx="5" fill="rgba(215,255,53,0.06)" stroke="#D7FF35" stroke-width="1" opacity="0.5"/>
                         <text x="700" y="91" text-anchor="middle" fill="#D7FF35" font-size="10" font-family="system-ui" opacity="0.7">AI Session</text>
 
-                        <!-- Lines from agents to shared block -->
-                        <line x1="140" y1="102" x2="140" y2="170" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
-                        <line x1="420" y1="102" x2="420" y2="170" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
-                        <line x1="700" y1="102" x2="700" y2="170" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
+                        <!-- Lines from agents to shared blocks -->
+                        <line x1="140" y1="102" x2="140" y2="158" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
+                        <line x1="420" y1="102" x2="420" y2="158" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
+                        <line x1="700" y1="102" x2="700" y2="158" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
 
                         <!-- Shared Skills Block -->
-                        <rect x="70" y="170" width="700" height="70" rx="6" fill="rgba(215,255,53,0.04)" stroke="#D7FF35" stroke-width="1.5"/>
-                        <text x="420" y="195" text-anchor="middle" fill="#D7FF35" font-size="12" font-weight="500" font-family="system-ui">Shared Skills</text>
-                        <text x="420" y="215" text-anchor="middle" fill="#D7FF35" font-size="9" font-family="monospace" opacity="0.6">render-deploy · figma-design · debugging · code-review · tdd · writing-plans</text>
-                        <text x="420" y="230" text-anchor="middle" fill="#D7FF35" font-size="8" font-family="system-ui" font-style="italic" opacity="0.4">version-controlled · platform-agnostic · same for everyone</text>
+                        <rect x="70" y="158" width="700" height="52" rx="6" fill="rgba(215,255,53,0.04)" stroke="#D7FF35" stroke-width="1.5"/>
+                        <text x="130" y="180" fill="#D7FF35" font-size="11" font-weight="500" font-family="system-ui">● Skills</text>
+                        <text x="480" y="195" text-anchor="middle" fill="#D7FF35" font-size="9" font-family="monospace" opacity="0.6">render-deploy · figma-design · debugging · code-review · tdd · writing-plans</text>
+
+                        <!-- Shared General Context Block -->
+                        <rect x="70" y="220" width="700" height="52" rx="6" fill="rgba(247,245,242,0.04)" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <text x="130" y="242" fill="#F7F5F2" font-size="11" font-weight="500" font-family="system-ui">■ General Context</text>
+                        <text x="500" y="257" text-anchor="middle" fill="#F7F5F2" font-size="9" font-family="monospace" opacity="0.6">github-workflow · creative-tenets · naming-conventions · code-standards</text>
 
                         <!-- Context gap indicator -->
-                        <text x="420" y="272" text-anchor="middle" fill="#CCC9C6" font-size="10" font-family="system-ui" opacity="0.35">⚠ but project context still resets every session</text>
+                        <text x="420" y="300" text-anchor="middle" fill="#CCC9C6" font-size="10" font-family="system-ui" opacity="0.35">⚠ but project-specific context (plans, tasks, background) still resets every session</text>
                     </svg>
                 </div>
                 <aside class="notes">
-                    First improvement: shared skills. Instead of everyone writing their own deploy script or naming rules, there's ONE shared set of playbooks.
-                    The AI reads from the same skills repo. Version controlled. Platform agnostic. Same knowledge, every session.
-                    But there's still a gap: project context — conventions, task statuses, project background — still resets every session.
+                    First improvement: shared skills AND general context. Instead of everyone writing their own prompts, there's ONE shared set of playbooks and working rules.
+                    Skills tell the AI what to do. General context — conventions, standards, workflow rules — tells it how your team works.
+                    Both are version controlled, platform agnostic, same for everyone.
+                    But there's still a gap: project-specific context — plans, tasks, project background — still resets every session.
                 </aside>
             </section>
 
-            <!-- 3c: Diagram — Shared Skills + Context -->
+            <!-- 3c: Diagram — Project Plans & Tasks -->
             <section>
-                <h2>Step 2: <span class="accent">Skills</span> + <span class="highlight">Context</span></h2>
-                <p class="dim" style="font-size: 0.7em; margin-bottom: 0.8em;">Agents know your playbooks AND your project conventions.</p>
+                <h2>Step 2: <span class="accent">Project Plans</span> &amp; <span class="accent">Tasks</span></h2>
+                <p class="dim" style="font-size: 0.7em; margin-bottom: 0.8em;">Agents share what's been done, what's next, and who's blocked.</p>
                 <div style="display: flex; justify-content: center;">
-                    <svg viewBox="0 0 840 310" style="max-width: 780px;" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 840 350" style="max-width: 780px;" xmlns="http://www.w3.org/2000/svg">
                         <!-- Person A -->
                         <circle cx="140" cy="30" r="6" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
                         <path d="M128,44 Q140,54 152,44" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
@@ -327,89 +332,111 @@
                         <text x="700" y="91" text-anchor="middle" fill="#D7FF35" font-size="10" font-family="system-ui" opacity="0.8">AI Session</text>
 
                         <!-- Lines from agents to shared blocks -->
-                        <line x1="140" y1="102" x2="140" y2="158" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
-                        <line x1="420" y1="102" x2="420" y2="158" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
-                        <line x1="700" y1="102" x2="700" y2="158" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
+                        <line x1="140" y1="102" x2="140" y2="148" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
+                        <line x1="420" y1="102" x2="420" y2="148" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
+                        <line x1="700" y1="102" x2="700" y2="148" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
 
-                        <!-- Shared Skills Block -->
-                        <rect x="70" y="158" width="700" height="52" rx="6" fill="rgba(215,255,53,0.04)" stroke="#D7FF35" stroke-width="1.5"/>
-                        <text x="130" y="180" fill="#D7FF35" font-size="11" font-weight="500" font-family="system-ui">● Skills</text>
-                        <text x="480" y="195" text-anchor="middle" fill="#D7FF35" font-size="9" font-family="monospace" opacity="0.6">render-deploy · figma-design · debugging · code-review · tdd · writing-plans</text>
+                        <!-- Shared Skills Block (carried from Step 1) -->
+                        <rect x="70" y="148" width="700" height="40" rx="6" fill="rgba(215,255,53,0.04)" stroke="#D7FF35" stroke-width="1" opacity="0.5"/>
+                        <text x="130" y="172" fill="#D7FF35" font-size="10" font-weight="500" font-family="system-ui" opacity="0.6">● Skills</text>
+                        <text x="480" y="172" text-anchor="middle" fill="#D7FF35" font-size="8" font-family="monospace" opacity="0.4">render-deploy · figma-design · debugging · code-review · tdd</text>
 
-                        <!-- Shared Context Block -->
-                        <rect x="70" y="220" width="700" height="52" rx="6" fill="rgba(247,245,242,0.04)" stroke="#F7F5F2" stroke-width="1.5"/>
-                        <text x="130" y="242" fill="#F7F5F2" font-size="11" font-weight="500" font-family="system-ui">■ Context</text>
-                        <text x="480" y="257" text-anchor="middle" fill="#F7F5F2" font-size="9" font-family="monospace" opacity="0.6">github-workflow · creative-tenets · context-engineering · multi-agent-coordination</text>
+                        <!-- General Context Block (carried from Step 1) -->
+                        <rect x="70" y="192" width="700" height="40" rx="6" fill="rgba(247,245,242,0.04)" stroke="#F7F5F2" stroke-width="1" opacity="0.5"/>
+                        <text x="130" y="216" fill="#F7F5F2" font-size="10" font-weight="500" font-family="system-ui" opacity="0.6">■ General Context</text>
+                        <text x="500" y="216" text-anchor="middle" fill="#F7F5F2" font-size="8" font-family="monospace" opacity="0.4">github-workflow · creative-tenets · naming-conventions</text>
+
+                        <!-- NEW: Project Plans & Tasks Block (highlighted) -->
+                        <rect x="70" y="240" width="700" height="44" rx="6" fill="rgba(215,255,53,0.06)" stroke="#D7FF35" stroke-width="1.5"/>
+                        <text x="130" y="266" fill="#D7FF35" font-size="11" font-weight="500" font-family="system-ui">▶ Project Plans &amp; Tasks</text>
+                        <text x="520" y="266" text-anchor="middle" fill="#D7FF35" font-size="9" font-family="monospace" opacity="0.6">plans · tasks · statuses · what’s done · what’s next · who’s blocked</text>
+
+                        <!-- Project Background (dimmed, in development) -->
+                        <rect x="70" y="292" width="700" height="30" rx="6" fill="none" stroke="#CCC9C6" stroke-width="0.5" stroke-dasharray="4 3" opacity="0.3"/>
+                        <text x="130" y="311" fill="#CCC9C6" font-size="9" font-family="system-ui" opacity="0.3">○ Project Background</text>
+                        <text x="500" y="311" text-anchor="middle" fill="#CCC9C6" font-size="8" font-family="monospace" opacity="0.2">briefs · RFPs · SOWs · designs · feedback  —  in development (security &amp; compliance)</text>
 
                         <!-- Bottom annotation -->
-                        <text x="420" y="300" text-anchor="middle" fill="#CCC9C6" font-size="10" font-family="system-ui" opacity="0.35">Agents know how to do things AND how your team works</text>
+                        <text x="420" y="342" text-anchor="middle" fill="#D7FF35" font-size="10" font-family="system-ui" opacity="0.45">Multiple agents can coordinate through shared plans and tasks</text>
                     </svg>
                 </div>
                 <aside class="notes">
-                    Second improvement: shared context. Now agents don't just know what to do — they know how your team works.
-                    GitHub workflow, creative tenets, naming standards, coordination protocols.
-                    Skills plus context means the AI starts every session already aligned with your team.
+                    Second step: project plans and tasks. Now agents don't just know your playbooks and conventions — they know what's happening in the project.
+                    Plans, tasks, statuses. What's been done, what's next, who's blocked. This is what enables multi-agent coordination.
+                    Project background data — briefs, RFPs, SOWs, feedback docs — is the bigger data exercise. That's in development, with security and compliance concerns to work through.
+                    These are fundamentally different types of context that need different tooling and arrive on different timelines.
                 </aside>
             </section>
 
             <!-- 3d: Diagram — Cloud Agents -->
             <section>
                 <h2>Step 3: <span class="accent">Cloud Agents</span></h2>
-                <p class="dim" style="font-size: 0.7em; margin-bottom: 0.8em;">Orchestrated agents that coordinate work across the team.</p>
+                <p class="dim" style="font-size: 0.7em; margin-bottom: 0.8em;">Orchestrated agents with access to the full context stack.</p>
                 <div style="display: flex; justify-content: center;">
-                    <svg viewBox="0 0 840 310" style="max-width: 780px;" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 840 340" style="max-width: 780px;" xmlns="http://www.w3.org/2000/svg">
                         <!-- Person A -->
-                        <circle cx="140" cy="25" r="6" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
-                        <path d="M128,39 Q140,49 152,39" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
-                        <line x1="140" y1="45" x2="140" y2="65" stroke="#F7F5F2" stroke-width="1" opacity="0.4"/>
+                        <circle cx="140" cy="20" r="6" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <path d="M128,34 Q140,44 152,34" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <line x1="140" y1="40" x2="140" y2="58" stroke="#F7F5F2" stroke-width="1" opacity="0.4"/>
                         <!-- Cloud Agent A -->
-                        <rect x="75" y="65" width="130" height="34" rx="5" fill="rgba(215,255,53,0.1)" stroke="#D7FF35" stroke-width="1.5"/>
-                        <text x="140" y="86" text-anchor="middle" fill="#D7FF35" font-size="10" font-weight="500" font-family="system-ui">☁ Cloud Agent</text>
+                        <rect x="75" y="58" width="130" height="32" rx="5" fill="rgba(215,255,53,0.1)" stroke="#D7FF35" stroke-width="1.5"/>
+                        <text x="140" y="78" text-anchor="middle" fill="#D7FF35" font-size="10" font-weight="500" font-family="system-ui">☁ Cloud Agent</text>
 
                         <!-- Person B -->
-                        <circle cx="420" cy="25" r="6" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
-                        <path d="M408,39 Q420,49 432,39" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
-                        <line x1="420" y1="45" x2="420" y2="65" stroke="#F7F5F2" stroke-width="1" opacity="0.4"/>
-                        <rect x="355" y="65" width="130" height="34" rx="5" fill="rgba(215,255,53,0.1)" stroke="#D7FF35" stroke-width="1.5"/>
-                        <text x="420" y="86" text-anchor="middle" fill="#D7FF35" font-size="10" font-weight="500" font-family="system-ui">☁ Cloud Agent</text>
+                        <circle cx="420" cy="20" r="6" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <path d="M408,34 Q420,44 432,34" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <line x1="420" y1="40" x2="420" y2="58" stroke="#F7F5F2" stroke-width="1" opacity="0.4"/>
+                        <rect x="355" y="58" width="130" height="32" rx="5" fill="rgba(215,255,53,0.1)" stroke="#D7FF35" stroke-width="1.5"/>
+                        <text x="420" y="78" text-anchor="middle" fill="#D7FF35" font-size="10" font-weight="500" font-family="system-ui">☁ Cloud Agent</text>
 
                         <!-- Person C -->
-                        <circle cx="700" cy="25" r="6" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
-                        <path d="M688,39 Q700,49 712,39" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
-                        <line x1="700" y1="45" x2="700" y2="65" stroke="#F7F5F2" stroke-width="1" opacity="0.4"/>
-                        <rect x="635" y="65" width="130" height="34" rx="5" fill="rgba(215,255,53,0.1)" stroke="#D7FF35" stroke-width="1.5"/>
-                        <text x="700" y="86" text-anchor="middle" fill="#D7FF35" font-size="10" font-weight="500" font-family="system-ui">☁ Cloud Agent</text>
+                        <circle cx="700" cy="20" r="6" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <path d="M688,34 Q700,44 712,34" fill="none" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <line x1="700" y1="40" x2="700" y2="58" stroke="#F7F5F2" stroke-width="1" opacity="0.4"/>
+                        <rect x="635" y="58" width="130" height="32" rx="5" fill="rgba(215,255,53,0.1)" stroke="#D7FF35" stroke-width="1.5"/>
+                        <text x="700" y="78" text-anchor="middle" fill="#D7FF35" font-size="10" font-weight="500" font-family="system-ui">☁ Cloud Agent</text>
 
                         <!-- Agent-to-agent bidirectional connections -->
-                        <line x1="205" y1="82" x2="355" y2="82" stroke="#D7FF35" stroke-width="1" opacity="0.4" stroke-dasharray="4 3"/>
-                        <polygon points="351,79 359,82 351,85" fill="#D7FF35" opacity="0.4"/>
-                        <polygon points="209,79 201,82 209,85" fill="#D7FF35" opacity="0.4"/>
-                        <line x1="485" y1="82" x2="635" y2="82" stroke="#D7FF35" stroke-width="1" opacity="0.4" stroke-dasharray="4 3"/>
-                        <polygon points="631,79 639,82 631,85" fill="#D7FF35" opacity="0.4"/>
-                        <polygon points="489,79 481,82 489,85" fill="#D7FF35" opacity="0.4"/>
+                        <line x1="205" y1="74" x2="355" y2="74" stroke="#D7FF35" stroke-width="1" opacity="0.4" stroke-dasharray="4 3"/>
+                        <polygon points="351,71 359,74 351,77" fill="#D7FF35" opacity="0.4"/>
+                        <polygon points="209,71 201,74 209,77" fill="#D7FF35" opacity="0.4"/>
+                        <line x1="485" y1="74" x2="635" y2="74" stroke="#D7FF35" stroke-width="1" opacity="0.4" stroke-dasharray="4 3"/>
+                        <polygon points="631,71 639,74 631,77" fill="#D7FF35" opacity="0.4"/>
+                        <polygon points="489,71 481,74 489,77" fill="#D7FF35" opacity="0.4"/>
 
                         <!-- Lines from agents to shared blocks -->
-                        <line x1="140" y1="99" x2="140" y2="148" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
-                        <line x1="420" y1="99" x2="420" y2="148" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
-                        <line x1="700" y1="99" x2="700" y2="148" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
+                        <line x1="140" y1="90" x2="140" y2="130" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
+                        <line x1="420" y1="90" x2="420" y2="130" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
+                        <line x1="700" y1="90" x2="700" y2="130" stroke="#D7FF35" stroke-width="1" opacity="0.3"/>
 
                         <!-- Shared Skills Block -->
-                        <rect x="70" y="148" width="700" height="50" rx="6" fill="rgba(215,255,53,0.04)" stroke="#D7FF35" stroke-width="1.5"/>
-                        <text x="130" y="169" fill="#D7FF35" font-size="11" font-weight="500" font-family="system-ui">● Skills</text>
-                        <text x="480" y="183" text-anchor="middle" fill="#D7FF35" font-size="9" font-family="monospace" opacity="0.6">render-deploy · figma-design · debugging · code-review · oz-orchestrated-build</text>
+                        <rect x="70" y="130" width="700" height="38" rx="6" fill="rgba(215,255,53,0.04)" stroke="#D7FF35" stroke-width="1.5"/>
+                        <text x="130" y="153" fill="#D7FF35" font-size="10" font-weight="500" font-family="system-ui">● Skills</text>
+                        <text x="480" y="153" text-anchor="middle" fill="#D7FF35" font-size="8" font-family="monospace" opacity="0.6">render-deploy · figma-design · debugging · code-review · oz-orchestrated-build</text>
 
-                        <!-- Shared Context Block -->
-                        <rect x="70" y="208" width="700" height="50" rx="6" fill="rgba(247,245,242,0.04)" stroke="#F7F5F2" stroke-width="1.5"/>
-                        <text x="130" y="229" fill="#F7F5F2" font-size="11" font-weight="500" font-family="system-ui">■ Context</text>
-                        <text x="480" y="243" text-anchor="middle" fill="#F7F5F2" font-size="9" font-family="monospace" opacity="0.6">github-workflow · creative-tenets · multi-agent-coordination · project background</text>
+                        <!-- General Context Block -->
+                        <rect x="70" y="172" width="700" height="38" rx="6" fill="rgba(247,245,242,0.04)" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <text x="130" y="195" fill="#F7F5F2" font-size="10" font-weight="500" font-family="system-ui">■ General Context</text>
+                        <text x="500" y="195" text-anchor="middle" fill="#F7F5F2" font-size="8" font-family="monospace" opacity="0.6">github-workflow · creative-tenets · naming-conventions · code-standards</text>
+
+                        <!-- Project Plans & Tasks Block -->
+                        <rect x="70" y="214" width="700" height="38" rx="6" fill="rgba(215,255,53,0.04)" stroke="#D7FF35" stroke-width="1.5"/>
+                        <text x="130" y="237" fill="#D7FF35" font-size="10" font-weight="500" font-family="system-ui">▶ Project Plans &amp; Tasks</text>
+                        <text x="520" y="237" text-anchor="middle" fill="#D7FF35" font-size="8" font-family="monospace" opacity="0.6">plans · tasks · statuses · coordination · handoffs</text>
+
+                        <!-- Project Background Block -->
+                        <rect x="70" y="256" width="700" height="38" rx="6" fill="rgba(247,245,242,0.04)" stroke="#F7F5F2" stroke-width="1.5"/>
+                        <text x="130" y="279" fill="#F7F5F2" font-size="10" font-weight="500" font-family="system-ui">○ Project Background</text>
+                        <text x="520" y="279" text-anchor="middle" fill="#F7F5F2" font-size="8" font-family="monospace" opacity="0.6">briefs · RFPs · SOWs · designs · feedback · emails · messages</text>
 
                         <!-- Bottom annotation -->
-                        <text x="420" y="295" text-anchor="middle" fill="#D7FF35" font-size="10" font-family="system-ui" opacity="0.5">Agents coordinate work · hand off tasks · keep everyone in sync</text>
+                        <text x="420" y="320" text-anchor="middle" fill="#D7FF35" font-size="10" font-family="system-ui" opacity="0.5">Full context stack · agents coordinate work · hand off tasks · keep everyone in sync</text>
                     </svg>
                 </div>
                 <aside class="notes">
-                    The endgame: cloud agents that can coordinate. Not just reading from the same skills and context, but actively working together.
-                    Agents can hand off tasks, share status, and keep the whole team in sync.
+                    The endgame: cloud agents with access to everything. Skills, general context, project plans, AND project background.
+                    Not just reading from the same knowledge, but actively coordinating work across teams.
+                    Each layer of context needed different tooling and arrived on a different timeline. This is what it looks like when it all comes together.
                     This is where tools like Warp Oz come in — orchestrating automated agents across projects.
                 </aside>
             </section>
@@ -529,39 +556,47 @@
 
             <!-- 8: Shared Context -->
             <section>
-                <h2>Shared Context: What We're Exploring</h2>
+                <h2>Project Context: What We're Exploring</h2>
                 <p style="font-size: 0.85em; margin-bottom: 0.8em;">
-                    The bigger opportunity: <span class="accent">sharing project context</span> across teams and their agents.
+                    Two distinct layers of <span class="accent">project context</span>, each with different tooling and timelines.
                 </p>
                 <div class="two-col" style="font-size: 0.75em;">
                     <div class="concept-box">
-                        <h3 class="accent">What to share</h3>
+                        <h3 class="accent">Plans &amp; Tasks <span class="dim" style="font-size: 0.7em;">(next)</span></h3>
                         <p class="dim" style="font-size: 0.85em;">
-                            Project background &amp; goals<br>
                             Plans, tasks, and statuses<br>
-                            Conventions &amp; standards
+                            What's done, what's next, who's blocked<br>
+                            Enables multi-agent coordination
+                        </p>
+                        <br>
+                        <p class="dim" style="font-size: 0.7em; font-style: italic;">
+                            MCP server · plans &amp; tasks in GitHub<br>
+                            3rd party context &amp; orchestration tools
                         </p>
                     </div>
                     <div class="concept-box context-box">
-                        <h3 class="highlight">How we're exploring it</h3>
+                        <h3 class="highlight">Project Background <span class="dim" style="font-size: 0.7em;">(ahead)</span></h3>
                         <p class="dim" style="font-size: 0.85em;">
-                            MCP server (structured to-dos, human-readable)<br>
-                            Plans &amp; tasks stored in GitHub<br>
+                            Briefs, RFPs, SOWs, technical designs<br>
+                            Team messages, emails, feedback docs<br>
+                            The bigger data exercise
+                        </p>
+                        <br>
+                        <p class="dim" style="font-size: 0.7em; font-style: italic;">
                             SurrealDB → flat files in repo<br>
-                            3rd party context &amp; orchestration tools
+                            Security &amp; compliance concerns to resolve
                         </p>
                     </div>
                 </div>
                 <br>
-                <p class="dim" style="font-size: 0.6em;">All approaches keep content in GitHub with need-to-know data only in MCP, designed to limit client data exposure.</p>
+                <p class="dim" style="font-size: 0.6em;">Plans &amp; tasks come first. Background data is the bigger lift with security and compliance to work through.</p>
                 <aside class="notes">
-                    This is where it gets interesting beyond skills.
-                    We want agents and people to share context: project background, task statuses, who's blocked on what.
-                    We're exploring multiple methods: an MCP server that can serve structured to-dos and is human-readable,
-                    storing plans and to-dos in GitHub, using SurrealDB to render data into flat files shared in repo,
-                    and evaluating 3rd party tooling for context management and agent orchestration.
-                    All of these keep content in GitHub by default. Only need-to-know data lives in MCP.
-                    Ideally this would be a company-approved cloud system, but we've been blocked on that, so we're working within constraints.
+                    These are two fundamentally different types of project context that need different tooling and arrive on different timelines.
+                    Plans and tasks are what we're building next. This is the coordination layer: what's been done, what's next, who's blocked.
+                    It enables multiple agents to work together on the same project.
+                    Project background — briefs, RFPs, SOWs, feedback docs, team messages — is the bigger data exercise.
+                    That comes later because it has real security and compliance concerns. Client data, sensitive docs, access control.
+                    We're deliberately sequencing these: plans and tasks first because they unlock coordination, background data when we've solved the compliance piece.
                 </aside>
             </section>
 
@@ -573,16 +608,18 @@
                 </p>
                 <ul class="honest-list">
                     <li class="fragment">
-                        <strong>Today:</strong> shared skills and context that make AI assistants
-                        meaningfully better across roles
+                        <strong>Today:</strong> shared skills and general context —
+                        playbooks and working rules that make AI assistants meaningfully better across roles
                     </li>
                     <li class="fragment">
-                        <strong>Next:</strong> shared project context and task statuses,
-                        enabling collaboration between teams and their agents
+                        <strong>Next:</strong> shared project plans and tasks,
+                        enabling coordination between agents and teams.
+                        <span class="dim">Background data in development</span>
                     </li>
                     <li class="fragment">
-                        <strong>Ahead:</strong> orchestrated agents that can coordinate work,
-                        hand off tasks, and keep everyone in sync
+                        <strong>Ahead:</strong> cloud agents with the full context stack —
+                        skills, conventions, plans, and project background —
+                        coordinating work across teams
                     </li>
                     <li class="fragment">
                         <strong>Certain:</strong> this problem isn't going away.
@@ -590,9 +627,10 @@
                     </li>
                 </ul>
                 <aside class="notes">
-                    The skills repo is step one. Shared context is step two.
-                    The endgame is orchestrated agents that can work across teams. Not replacing people, but coordinating work.
-                    We're building toward that incrementally. Each step delivers value on its own.
+                    Step one is skills plus general context — that's live now.
+                    Step two is project plans and tasks — the coordination layer that lets multiple agents work together. Background data is the bigger exercise, in development.
+                    Step three is cloud agents with the full stack. Skills, conventions, plans, project background. All of it.
+                    Each of these context types manifests differently, needs different tooling, and arrives on a different timeline. We're building incrementally.
                 </aside>
             </section>
 

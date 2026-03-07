@@ -14,6 +14,24 @@ Every new session is a blank slate.
 Devs re-explain branch conventions. Designers re-explain creative tenets. Producers re-explain project timelines.
 At team scale it gets worse. Everyone has their own prompt snippets, their own workarounds, none of it version controlled or shared.
 
+SLIDE 3b: STEP 1 — SKILLS + GENERAL CONTEXT
+First improvement: shared skills AND general context. Instead of everyone writing their own prompts, there's ONE shared set of playbooks and working rules.
+Skills tell the AI what to do. General context — conventions, standards, workflow rules — tells it how your team works.
+Both are version controlled, platform agnostic, same for everyone.
+But there's still a gap: project-specific context — plans, tasks, project background — still resets every session.
+
+SLIDE 3c: STEP 2 — PROJECT PLANS & TASKS
+Second step: project plans and tasks. Now agents don't just know your playbooks and conventions — they know what's happening in the project.
+Plans, tasks, statuses. What's been done, what's next, who's blocked. This is what enables multi-agent coordination.
+Project background data — briefs, RFPs, SOWs, feedback docs — is the bigger data exercise. That's in development, with security and compliance concerns to work through.
+These are fundamentally different types of context that need different tooling and arrive on different timelines.
+
+SLIDE 3d: STEP 3 — CLOUD AGENTS
+The endgame: cloud agents with access to everything. Skills, general context, project plans, AND project background.
+Not just reading from the same knowledge, but actively coordinating work across teams.
+Each layer of context needed different tooling and arrived on a different timeline. This is what it looks like when it all comes together.
+This is where tools like Warp Oz come in — orchestrating automated agents across projects.
+
 SLIDE 4: WHAT IS IT
 One sentence pitch. It's a shared repo. Skills and context files. Any AI tool reads them.
 Your assistant starts the session already knowing your conventions.
@@ -39,21 +57,19 @@ This isn't a pitch deck for something we plan to build. The repo exists, the dev
 Skills work. Context works. Setup docs are written.
 But we're early. We need more people using it, more feedback, and more skills.
 
-SLIDE 9: SHARED CONTEXT
-This is where it gets interesting beyond skills.
-We want agents and people to share context: project background, task statuses, who's blocked on what.
-We're exploring multiple methods:
-  - An MCP server that can serve structured to-dos and is human-readable
-  - Storing plans and to-dos in GitHub
-  - Using SurrealDB to render data into flat files shared in repo
-  - Evaluating 3rd party tooling for context management and agent orchestration
-All of these keep content in GitHub by default. Only need-to-know data lives in MCP.
-Ideally this would be a company-approved cloud system, but we've been blocked on that, so we're working within constraints.
+SLIDE 9: PROJECT CONTEXT — WHAT WE'RE EXPLORING
+These are two fundamentally different types of project context that need different tooling and arrive on different timelines.
+Plans and tasks are what we're building next. This is the coordination layer: what's been done, what's next, who's blocked.
+It enables multiple agents to work together on the same project.
+Project background — briefs, RFPs, SOWs, feedback docs, team messages — is the bigger data exercise.
+That comes later because it has real security and compliance concerns. Client data, sensitive docs, access control.
+We're deliberately sequencing these: plans and tasks first because they unlock coordination, background data when we've solved the compliance piece.
 
 SLIDE 10: WHERE THIS IS GOING
-The skills repo is step one. Shared context is step two.
-The endgame is orchestrated agents that can work across teams. Not replacing people, but coordinating work.
-We're building toward that incrementally. Each step delivers value on its own.
+Step one is skills plus general context — that's live now.
+Step two is project plans and tasks — the coordination layer that lets multiple agents work together. Background data is the bigger exercise, in development.
+Step three is cloud agents with the full stack. Skills, conventions, plans, project background. All of it.
+Each of these context types manifests differently, needs different tooling, and arrives on a different timeline. We're building incrementally.
 
 SLIDE 11: WHAT WE NEED FROM YOU
 Clear ask. We need people to actually try this and give us feedback.
